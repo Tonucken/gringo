@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
-  RewriteBase /~toha12/phpmvc/kmom03/gringo/
+  RewriteBase /~toha12/phpmvc/kmom05/gringo/
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule (.*) index.php/$1 [NC,L]

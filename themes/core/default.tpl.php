@@ -26,6 +26,9 @@
   
   <footer class="roundedbottom kmom">
     <?=$footerkmom?>
+      <span id='login-menu'>
+      <?=login_menu()?>
+      </span>
   </footer>
 
 </body>

@@ -137,14 +137,14 @@ nav.navmenu a:hover	{background: #FFF;
 			border: 1px solid #000;
 			opacity: 0.5;}
 
-a#index-, a#guestbook-, a#redovisning-, a#source- 
+a#index-, a#guestbook-, a#redovisning-, a#source-, a#blog- 
 	{background:#FFF; 
 	border: 1px solid #000;
 	opacity: 0.5;}  
 			
 h1, h2, h3, h4	{padding-left: 5px;}
 
-p	{padding-left: 5px;
+p, a	{padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 0;}
 	
@@ -159,6 +159,14 @@ aside.right	{float: right;
 article 	{width:auto;}
 
 img#eyes	{width: 90px;}
+
+#login-menu{float:right;}
+#login-menu img.gravatar{vertical-align:middle;}
+#login-menu a{text-decoration:none;}
+#login-menu a:hover{text-decoration:underline;}
+
+.validation-failed{border:2px solid red;}
+.validation-message{color:red;font-size:smaller;}
 
 .right {float: right;}
 
@@ -187,7 +195,34 @@ padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; width: auto; }
 .success a { color: #264409; width: 75%;}
 .info a { color: #205791; width: 75%;}
 
+/**
+* Forms
+*/
+input,textarea{font:inherit;}
+input[readonly]{color:#666;}
+label{font-size:smaller;}
+.validation-failed{border:2px solid red;}
+.validation-message{color:red;font-size:smaller;}
+.form-action-link{font-size:smaller;}
 
+.content-edit input[type=text]{width:30em;}
+.content-edit textarea{width:40em;height:15em;}
+
+
+/**
+* User feedback message wrappers.
+*/
+.error, .alert, .warning, .notice, .success, .info {
+padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error, .alert { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+.notice, .warning { background: #fff6bf; color: #514721; border-color: #ffd324; }
+.success { background: #e6efc2; color: #264409; border-color: #c6d880; }
+.info { background: #d5edf8; color: #205791; border-color: #92cae4; }
+.error a, .alert a { color: #8a1f11; }
+.notice a, .warning a { color: #514721; }
+.success a { color: #264409; }
+.info a { color: #205791; }
 
 
 /* ==========================================================================
