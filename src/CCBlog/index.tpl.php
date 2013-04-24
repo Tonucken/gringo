@@ -7,8 +7,7 @@
     <h2><?=esc($val['title'])?></h2>
 
     <p class='smaller-text'>
-    <em>Posted on <?=$val['created']?> 
-    by <?=$val['owner']?></em>
+    <em>Posted on <?=$val['created']?> by <?=$val['owner']?></em>
     </p>
 
     <p>

@@ -13,8 +13,8 @@
   <div id='login-menu'><?=login_menu()?></div>
   <div id='banner'>
     <a href='<?=base_url()?>'><img class='site-logo' src='<?=$logo?>' alt='logo' width='<?=$logo_width?>' height='<?=$logo_height?>' /></a>
-    <p class='site-title'><a href='<?=base_url()?>'><?=$header?></a></p>
-    <p class='site-slogan'><?=$slogan?></p>
+    <p class='site-title'><a href='<?=base_url()?>'><?=$header?></a></span>
+    <p class='site-slogan'><?=$slogan?></span>
   </div> <!-- banner -->
 </div> <!-- header -->
 </div> <!-- wrap -->
