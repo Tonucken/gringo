@@ -11,39 +11,53 @@ error_reporting(-1);
 ini_set('display_errors', 1);
 
 /**
+* Set what to show as debug or developer information in the get_debug() theme helper.
+*/
+$ly->config['debug']['lydia'] = false;
+$ly->config['debug']['session'] = false;
+$ly->config['debug']['db-num-queries'] = true;
+$ly->config['debug']['db-queries'] = true;
+$ly->config['debug']['timer'] = true;
+
+/**
+* Set database(s).
+*/
+$ly->config['database'][0]['dsn'] = 'sqlite:' . LYDIA_SITE_PATH . '/data/.ht.sqlite';
+
+/**
  * What type of urls should be used?
  * 
  * default      = 0      => index.php/controller/method/arg1/arg2/arg3
  * clean        = 1      => controller/method/arg1/arg2/arg3
  * querystring  = 2      => index.php?q=controller/method/arg1/arg2/arg3
  */
-$gr->config['url_type'] = 1;
+$ly->config['url_type'] = 1;
 
 /**
  * Set a base_url to use another than the default calculated
  */
-$gr->config['base_url'] = null;
+$ly->config['base_url'] = null;
 
 /**
  * Define session name
  */
-$gr->config['session_name'] = preg_replace('/[:\.\/-_]/', '', $_SERVER["SERVER_NAME"]);
+$ly->config['session_name'] = preg_replace('/[:\.\/-_]/', '', $_SERVER["SERVER_NAME"]);
+$ly->config['session_key']  = 'lydia';
 
 /**
  * Define server timezone
  */
-$gr->config['timezone'] = 'Europe/Stockholm';
+$ly->config['timezone'] = 'Europe/Stockholm';
 
 /**
  * Define internal character encoding
  */
-$gr->config['character_encoding'] = 'UTF-8';
+$ly->config['character_encoding'] = 'UTF-8';
 
 /**
  * Define language
  */
-$gr->config['language'] = 'en';
-
+$ly->config['language'] = 'en';
 
 /**
  * Define the controllers, their classname and enable/disable them.
@@ -54,15 +68,16 @@ $gr->config['language'] = 'en';
  * $ly->FrontControllerRoute();
  * which is called in the frontcontroller phase from index.php.
  */
-$gr->config['controllers'] = array(
+$ly->config['controllers'] = array(
   'index'     => array('enabled' => true,'class' => 'CCIndex'),
   'developer' => array('enabled' => true,'class' => 'CCDeveloper'),
+  'guestbook' => array('enabled' => true,'class' => 'CCGuestbook'),
 );
 
 /**
  * Settings for the theme.
  */
-$gr->config['theme'] = array(
+$ly->config['theme'] = array(
   // The name of the theme in the theme directory
   'name'    => 'core', 
 );

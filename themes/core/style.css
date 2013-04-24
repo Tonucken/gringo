@@ -94,19 +94,22 @@ textarea {
    ========================================================================== */
 html	{background: #3E0F4F;
 	overflow-y: scroll;
-	font-family: Georgia, serif;}  
+	font-family: Georgia, serif;
+	word-wrap:break-word;}  
 
 body   {background: #957DB0;
 	font-family: Georgia, serif;
 	color: #3E0F4F;
 	width: 800px;
 	margin: 20px auto 20px auto; /* above, right, below, left */
-	border: 1px solid;}
+	border: 1px solid;
+	word-wrap: break-word;}
 	
-header, div, footer, footer#kmom 
+header, div, footer
 	{margin: 0 auto;
 	width: 800px;
-	border: 1px solid;}
+	border: 1px solid;
+	word-wrap:break-word;} 
 
 header	{text-align: center;
 	background-color: #DAB5BA;}
@@ -117,8 +120,6 @@ footer	{padding-left: 20px;
 footer.kmom 	{width: auto;
 		background-color: #DAB5BA;
 		}
-
-
 
 a		{text-decoration: none;
 		color: #4E388A;}
@@ -136,21 +137,16 @@ nav.navmenu a:hover	{background: #FFF;
 			border: 1px solid #000;
 			opacity: 0.5;}
 
-a#index-, a#redovisning-, a#source- 
+a#index-, a#guestbook-, a#redovisning-, a#source- 
 	{background:#FFF; 
 	border: 1px solid #000;
 	opacity: 0.5;}  
-			
-			
-			
 			
 h1, h2, h3, h4	{padding-left: 5px;}
 
 p	{padding-left: 5px;
 	padding-right: 5px;
 	margin-top: 0;}
-
-	
 	
 aside.right	{float: right;
 		border: 1px solid;
@@ -161,13 +157,10 @@ aside.right	{float: right;
 		text-align: center;}
 
 article 	{width:auto;}
-	
-	
 
 img#eyes	{width: 90px;}
 
 .right {float: right;}
-
 
 .roundedtop	{border-top-left-radius: 50px;
 		border-top-right-radius: 50px;} 
@@ -178,6 +171,21 @@ img#eyes	{width: 90px;}
 .bold	{font-weight: bold;}
 
 .italic	{font-style: italic;}
+
+/**
+* User feedback message wrappers.
+*/
+.error, .alert, .warning, .notice, .success, .info {
+padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; width: auto; }
+
+.error, .alert { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; width: auto;}
+.notice, .warning { background: #fff6bf; color: #514721; border-color: #ffd324; width: auto;}
+.success { background: #e6efc2; color: #264409; border-color: #c6d880; width: auto;}
+.info { background: #d5edf8; color: #205791; border-color: #92cae4; width: auto;}
+.error a, .alert a { color: #8a1f11; width: 75%;}
+.notice a, .warning a { color: #514721; width: 75%;}
+.success a { color: #264409; width: 75%;}
+.info a { color: #205791; width: 75%;}
 
 
 

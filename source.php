@@ -144,9 +144,9 @@ if($sourceNoIntro) {
 } else {
   $source_html = <<<EOD
 <header>
-<h1>Show sourcecode</h1>
+<h1>Visa källkoden</h1>
 <p>
-The following files exists in this folder. Click to view.
+Följande filer finns i denna mapp. Klicka för att visa.
 </p>
 </header>
 EOD;
@@ -359,15 +359,13 @@ EOD;
 EOD;
 }
 
-
-
 // -------------------------------------------------------------------------------------------
 //
 // Create and print out the html-page
 //
-$source_pageTitle = "Show sourcecode";
+$source_pageTitle = "Visa källkoden";
 $source_pageCharset = "utf-8";
-$source_pageLanguage = "en";
+$source_pageLanguage = "sv";
 $sourceBody=$source_html;
 $sourceStyle=<<<EOD
      div.container {
@@ -407,7 +405,8 @@ EOD;
 
 if(!isset($sourceNoEcho)) {
   // Print the header and page
-  header("Content-Type: text/html; charset={$source_pageCharset}");
+  //header("Content-Type: text/html; charset={$source_pageCharset}");
+
   echo <<<EOD
 <!DOCTYPE html>
 <html lang="{$source_pageLanguage}">
@@ -423,11 +422,9 @@ if(!isset($sourceNoEcho)) {
 </head>
 <body>
   {$sourceBody}
-<script>var _gaq=[['_setAccount','UA-22093351-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 </body>
 </html>  
 EOD;
 
   exit;
 }
-

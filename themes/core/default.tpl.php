@@ -1,28 +1,32 @@
 <!doctype html>
-<html lang="sv">
+<html lang='en'>
 <head>
-  <meta charset="utf-8">
+  <meta charset='utf-8'/>
   <title><?=$title?></title>
-<link rel="stylesheet" href="<?=$stylesheet?>">
+<!-- <link rel='shortcut icon' href='<?=$favicon?>'/> -->
+  <link rel='stylesheet' href='<?=$stylesheet?>'/>
 </head>
 
 <body class="roundedtop roundedbottom">
+  
   <header class="roundedtop">
-  <?=$header?>
+    <?=$header?>
   </header>
-
-  <div id="main" role="main">
-  <?=$main?>
-  <?=get_debug()?>
+  
+  <div>
+    <?=@$main?>
+    <?=get_messages_from_session()?>
+    <?=render_views()?>
+    <?=get_debug()?>
   </div>
-
+  
   <footer>
-  <?=$footer?>
+    <?=$footer?>
   </footer>
   
   <footer class="roundedbottom kmom">
-  <?=$footerkmom?>
+    <?=$footerkmom?>
   </footer>
-  
+
 </body>
 </html>
